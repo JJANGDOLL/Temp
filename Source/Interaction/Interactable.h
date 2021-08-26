@@ -16,8 +16,6 @@ class UInteractable : public UInterface
 /**
  * 
  */
-class UMeshComponent;
-
 class INTERACTION_API IInteractable
 {
 	GENERATED_BODY()
@@ -26,9 +24,6 @@ class INTERACTION_API IInteractable
 public:
 	UFUNCTION(BlueprintNativeEvent, BlueprintCallable, Category="Interact")
 	void Interaction();
-
-    UFUNCTION(BlueprintNativeEvent, BlueprintCallable, Category = "Interact")
-	UMeshComponent* GetInteractableMesh();
 
 	UFUNCTION(BlueprintNativeEvent, BlueprintCallable, Category="Interact")
 	FVector GetCenterOfMass();

@@ -113,7 +113,8 @@ void UInteractorComponent::OffFocusInteractor()
 
 void UInteractorComponent::DoInteraction()
 {
-    IInteractable::Execute_Interaction(BestInteractor);
+    if(BestInteractor != nullptr)
+        IInteractable::Execute_Interaction(BestInteractor);
 }
 
 void UInteractorComponent::TickComponent(float DeltaTime, enum ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction)
